@@ -30,6 +30,10 @@ public class ShopApp {
         System.out.println("Total Reguler   : Rp" + checkout.total(cart, regular));
         System.out.println("Total Express   : Rp" + checkout.total(cart, express));
 
+        // cek refund dengan bank transfer:
+        // checkout.refund(new BankTransferPayment("Bank Nagari"), 1_000);
+        // The method refund(RefundablePayment, long) in the type CheckoutService is not applicable for the arguments (BankTransferPayment, int)
+
         // payment method
         EWalletPayment wallet = new EWalletPayment("DompetKu", 300_000);
         PaymentMethod transfer = new BankTransferPayment("Bank Nagari");
